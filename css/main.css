@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #0b2028, #16141b);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.mainColor {
+    color: #0c1520;
+}
+
+.sideColor {
+    color: white;
+}
+
+.mainFont {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.1vw;
+    transition: 0.5s;
+}
+
+.mainFont:hover {
+    font-size: 2.3vw;
+    transition: 0.5s;
+}
+
+.sideFont {
+
+}
+
+.barButton {
+    background-color: #1fdc75;
+    transition: 0.3s;
+}
+
+.activeSite {
+    background-color: #00d2a8;
+}
+
+.barButton:hover {
+    background-color: #00e0a8;
+    transition: 0.3s;
+}
+
+.homeButton {
+    width: 11%;
+    height: 3.5vw;
+}
+
+.gamesButton {
+    width: 13%;
+    height: 3.5vw;
+}
+
+.toolsButton {
+    width: 12%;
+    height: 3.5vw;
+}
+
+.aboutButton {
+    width: 12%;
+    height: 3.5vw;
+}
+
+.contactButton {
+    width: 16%;
+    height: 3.5vw;
+}
+
+.logoButton {
+    width: 20%;
+    height: 3.5vw;
+    background-color: #00d2a8;
+}
+
+.buttonLeft {
+    float: left;
+    margin-right: 1vw;
+}
+
+.buttonRight {
+    float: right;
+}
+
+.barText {
+    text-align: center;
+}
+
+.navbar {
+    width: 100%;
+    height: 3.5vw;
+    background-color: rgba(5, 15, 19, 0.95);
+    top: 0;
+
+    position: fixed;
+}
+
+.content {
+    width: 100%;
+    height: 55.5vw;
+
+    padding-top: 5vw;
+    font-family: 'Inter', sans-serif;
+}
+
+.imageContainer {
+    width: 100%;
+    height: 55.5vw;
+    position: relative;
+}
+
+#indexImage {
+    width: 100%;
+    height: 55.5vw;
+}
+
+.indexImageButton {
+    position: absolute;
+    background-color: #0f1c24;
+    top: 78.5%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    font-size: 4vw;
+    font-family: 'Verdana', bold, serif;
+    font-weight: 900;
+    color: #eeeeee;
+    padding: 1vw 6.5vw;
+    border: none;
+    cursor: pointer;
+    border-radius: 2vw;
+    transition: 0.7s;
+}
+
+.indexImageButton:hover {
+    color: #0f1c24;
+    background-color: #00e0a8;
+    letter-spacing: 0.8vw;
+    transition: 0.7s;
+}
+
+.footer {
+    color: rgba(203, 203, 203, 0.2);
+    margin-top: 5vw;
+    width: 100%;
+    height: 9.5vw;
+    background-color: rgb(31, 31, 41);
+    text-align: center;
+    font-size: 1.5vw;
+    font-family: 'Verdana', sans-serif;
+}
+
+.lineFooter {
+    border-color: rgba(203, 203, 203, 0.2);
+    border-style: inset;
+    width: 90%;
+}
+
+.footerInfo {
+    color: rgba(203, 203, 203, 0.2);
+    float: left;
+    text-align: justify;
+    margin: 2vw 13.15% 1vw 13.15%;
+}
