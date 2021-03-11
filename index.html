@@ -4,37 +4,36 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="script/main.js"></script>
 </head>
 <body>
 <div class="navbar" id="navbar">
-    <div class="barButton buttonLeft logoButton">
+    <div class="buttonLeft logoButton">
         <div class="barText mainColor mainFont">LOGO</div>
     </div>
     <a href="contact.html">
-        <div class="barButton buttonRight contactButton">
+        <div class="buttonRight contactButton">
             <div class="barText mainColor mainFont">CONTACT</div>
         </div>
     </a>
     <a href="about.html">
-        <div class="barButton buttonRight aboutButton">
+        <div class="buttonRight aboutButton">
             <div class="barText mainColor mainFont">ABOUT</div>
         </div>
     </a>
     <a href="games.html">
-        <div class="barButton buttonRight gamesButton">
+        <div class="buttonRight gamesButton">
             <div class="barText mainColor mainFont">GAMES</div>
         </div>
     </a>
     <a href="tools.html">
-        <div class="barButton buttonRight toolsButton">
+        <div class="buttonRight toolsButton">
             <div class="barText mainColor mainFont">TOOLS</div>
         </div>
     </a>
 
     <a href="index.html">
-        <div class="activeSite barButton buttonRight homeButton">
-            <div class="barText mainColor mainFont">HOME ICON</div>
+        <div class="activeSite buttonRight homeButton">
+            <div class="barText mainColor mainFont activeSite">HOME ICON</div>
         </div>
     </a>
 </div>
@@ -51,5 +50,23 @@
     <hr class="lineFooter">
     <p>Designed by Mint Missy</p>
 </div>
+<script>
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+
+    function scrollFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+            console.log("TUTU")
+        } else {
+            console.log("DUDU")
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
 </body>
 </html>
