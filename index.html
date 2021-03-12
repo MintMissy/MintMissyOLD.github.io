@@ -4,42 +4,48 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <div class="navbar" id="navbar">
-    <div class="buttonLeft logoButton">
-        <div class="barText mainColor mainFont">LOGO</div>
+    <div class="buttonLeft">
+        <div class="primaryColor mainFont logoButton">
+            <img id="navbarLogo" src="images/logo.svg" alt="logo" fill="white">
+        </div>
     </div>
     <a href="contact.html">
         <div class="buttonRight contactButton">
-            <div class="barText mainColor mainFont">CONTACT</div>
+            <div class="primaryColor mainFont textButton">CONTACT</div>
         </div>
     </a>
     <a href="about.html">
         <div class="buttonRight aboutButton">
-            <div class="barText mainColor mainFont">ABOUT</div>
+            <div class="primaryColor mainFont textButton">ABOUT</div>
         </div>
     </a>
     <a href="games.html">
         <div class="buttonRight gamesButton">
-            <div class="barText mainColor mainFont">GAMES</div>
+            <div class="primaryColor mainFont textButton">GAMES</div>
         </div>
     </a>
     <a href="tools.html">
         <div class="buttonRight toolsButton">
-            <div class="barText mainColor mainFont">TOOLS</div>
+            <div class="primaryColor mainFont textButton">TOOLS</div>
         </div>
     </a>
 
     <a href="index.html">
-        <div class="activeSite buttonRight homeButton">
-            <div class="barText mainColor mainFont activeSite">HOME ICON</div>
+        <div class="activeSite buttonLeft homeButton">
+            <div class="primaryColor mainFont activeSite textButton">HOME</div>
         </div>
     </a>
 </div>
 <div class="content">
     <div class="imageContainer">
         <img id="indexImage" src="images/index.png" alt="Main Page Image">
+        <img class="indexLeftLogo" src="images/logo.svg" alt="Logo">
         <button class="indexImageButton">PLAY</button>
     </div>
 </div>
@@ -55,15 +61,13 @@
         scrollFunction()
     };
 
-    var navbar = document.getElementById("navbar");
-    var sticky = navbar.offsetTop;
+    let navbar = document.getElementById("navbar");
+    let sticky = navbar.offsetTop;
 
     function scrollFunction() {
         if (window.pageYOffset >= sticky) {
             navbar.classList.add("sticky")
-            console.log("TUTU")
         } else {
-            console.log("DUDU")
             navbar.classList.remove("sticky");
         }
     }

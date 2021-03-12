@@ -1,0 +1,80 @@
+/* Navbar and button colors */
+.navbar {
+    z-index: 9;
+    width: 100%;
+    height: 3.5vw;
+    background-color: #2f2f3f;
+}
+
+.activeSite {
+    background-color: #39394b;
+}
+
+/* Buttons and text positioning */
+.buttonLeft {
+    float: left;
+    text-align: center;
+}
+
+.buttonRight {
+    float: right;
+    text-align: center;
+}
+
+/* Sticky navbar script */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+}
+
+/* Navbar content (from left side) */
+.logoButton {
+    width: 15%;
+    height: 3.5vw;
+}
+
+#navbarLogo {
+    width: 5vw;
+    height: 3.5vw;
+    transition: 0.5s;
+}
+
+.homeButton {
+    width: 7%;
+    height: 3.5vw;
+}
+
+.toolsButton {
+    width: 12%;
+    height: 3.5vw;
+}
+
+.gamesButton {
+    width: 13%;
+    height: 3.5vw;
+}
+
+.aboutButton {
+    width: 12%;
+    height: 3.5vw;
+}
+
+.contactButton {
+    width: 16%;
+    height: 3.5vw;
+}
+
+/* Text animations on hover */
+.textButton {
+    transition: 0.5s;
+}
+
+.textButton:hover {
+    font-size: 2.3vw;
+    transition: 0.5s;
+}
