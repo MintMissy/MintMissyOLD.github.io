@@ -5,6 +5,33 @@
 @import "footer.css";
 @import "index.css";
 
+/* Smooth scrolling after clicking a link*/
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scroll */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #2f2f2f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #474747;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #626262;
+}
+
 body {
     background-image: linear-gradient(to bottom, #0b2028, #16141b);
     margin: 0;

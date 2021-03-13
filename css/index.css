@@ -1,5 +1,4 @@
 /* Document length */
-
 .content {
     width: 100%;
     height: 220vw;
@@ -34,7 +33,7 @@
 .indexTopImageTitle {
     position: absolute;
     top: 22.5vw;
-    left: 37vw;
+    left: 40vw;
 }
 
 /* Button position*/
@@ -53,12 +52,19 @@
     cursor: pointer;
     border-radius: 2vw;
     transition: 0.7s;
+    outline: none;
 }
 
 /* Button animation on hover*/
 .indexImageButton:hover {
     letter-spacing: 0.8vw;
     transition: 0.7s;
+}
+
+/* Location after click explore button */
+#myLandLink {
+    position: absolute;
+    top: 55vw;
 }
 
 /* Second title */
@@ -75,6 +81,27 @@
     top: 72vw;
     left: 23vw;
 }
+
+.limeBackgroundLeft {
+    z-index: -1;
+    position: absolute;
+    background-color: #1fdc75;
+    width: 70%;
+    height: 75vw;
+    top: 80vw;
+    left: 0;
+}
+
+.limeBackgroundRight {
+    z-index: -1;
+    position: absolute;
+    background-color: #1fdc75;
+    width: 50%;
+    height: 55vw;
+    top: 105vw;
+    left: 50%;
+}
+
 
 /* Container of first background image */
 .bottomImageContainer {
