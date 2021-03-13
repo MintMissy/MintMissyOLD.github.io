@@ -12,35 +12,36 @@ body {
     background-attachment: fixed;
 }
 
-/*TODO Chose color*/
 /* colors for text */
 .primaryColor {
     color: #1fdc75;
 }
 
 .secondaryColor {
-    color: white;
+    color: #1fa5b3;
 }
 
-/*TODO Chose colors*/
+.primaryWhite {
+    color: #eeeeee;
+}
+
 /* colors for text */
 .primaryBlack {
-    color: white;
+    color: #131920;
 }
 
 .secondaryBlack {
-    color: white;
+    color: #0c2027;
 }
 
 .primaryGray {
-    color: white;
+    color: rgba(203, 203, 203, 0.2);
 }
 
-/*TODO Chose fonts and sizes*/
 /* fonts and sizes for text */
 .title {
     font-family: 'Oswald', sans-serif;
-    font-size: 2.1vw;
+    font-size: 5.5vw;
     text-align: center;
 }
 
@@ -56,9 +57,10 @@ body {
     text-align: justify;
 }
 
-/*TODO Replace this*/
-.mainFont {
+.navbarText {
     font-family: 'Oswald', sans-serif;
     font-size: 2.1vw;
+    text-align: center;
+
     transition: 0.5s;
 }
