@@ -1,12 +1,9 @@
 /* Document length */
-html {
-    height: 100%;
-}
 
 .content {
-    margin-top: 5vw;
     width: 100%;
-    height: 110vw;
+    height: 220vw;
+    margin-top: 5vw;
 }
 
 /* Logo near the face */
@@ -34,7 +31,7 @@ html {
 }
 
 /* First title */
-.indexTopImageTitle{
+.indexTopImageTitle {
     position: absolute;
     top: 22.5vw;
     left: 37vw;
@@ -65,16 +62,44 @@ html {
 }
 
 /* Second title */
-.indexTopImageTitle2{
+.indexTopImageTitle2 {
     position: absolute;
-    top: 62vw;
+    top: 59vw;
     left: 22.5vw;
 }
 
 /* First text */
-.indexTopImageText{
+.indexTopImageText {
     width: 45%;
     position: absolute;
-    top: 75vw;
+    top: 72vw;
     left: 23vw;
+}
+
+/* Container of first background image */
+.bottomImageContainer {
+    margin-top: 10vw;
+    width: 100%;
+    height: 110vw;
+}
+
+/* First background image */
+.indexImageBottom {
+    width: 100%;
+    height: 110vw;
+}
+
+/* Third title */
+.indexBottomImageTitle {
+    position: absolute;
+    top: 149vw;
+    left: 45.5vw;
+}
+
+/* Second text */
+.indexBottomImageText {
+    width: 45%;
+    position: absolute;
+    top: 162vw;
+    left: 46vw;
 }

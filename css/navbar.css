@@ -28,10 +28,6 @@
     width: 100%;
 }
 
-.sticky + .content {
-    padding-top: 60px;
-}
-
 /* Navbar content (from left side) */
 .logoButton {
     width: 15%;
