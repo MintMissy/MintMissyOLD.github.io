@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="images/logo.png" style="width: 10vw; height: 10vw">
+</head>
+<body>
+<div class="navbar" id="navbar">
+    <div class="buttonLeft">
+        <div class="primaryColor navbarText logoButton">
+            <img id="navbarLogo" src="images/logo.svg" alt="logo">
+        </div>
+    </div>
+    <a href="contact.html">
+        <div class="buttonRight contactButton">
+            <div class="primaryColor navbarText textButton">CONTACT</div>
+        </div>
+    </a>
+    <a href="about.html">
+        <div class="activeSite buttonRight aboutButton">
+            <div class="primaryColor navbarText textButton">ABOUT</div>
+        </div>
+    </a>
+    <a href="games.html">
+        <div class="buttonRight gamesButton">
+            <div class="primaryColor navbarText textButton">GAMES</div>
+        </div>
+    </a>
+    <a href="tools.html">
+        <div class="buttonRight toolsButton">
+            <div class="primaryColor navbarText textButton">TOOLS</div>
+        </div>
+    </a>
+
+    <a href="index.html">
+        <div class="buttonLeft homeButton">
+            <div class="primaryColor navbarText textButton">HOME</div>
+        </div>
+    </a>
+</div>
+
+<div class="content">
+
+</div>
+
+<div class="footer">
+    <p class="footerInfo primaryGray text">Youtube</p>
+    <p class="footerInfo primaryGray text">Instagram</p>
+    <p class="footerInfo primaryGray text">Github</p>
+    <hr class="lineFooter">
+    <p class="primaryGray text footerCredits">Designed by Mint Missy</p>
+</div>
+<script>
+    window.onscroll = function () {
+        scrollFunction()
+    };
+
+    let navbar = document.getElementById("navbar");
+    let sticky = navbar.offsetTop;
+
+    function scrollFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
+</body>
+</html>
