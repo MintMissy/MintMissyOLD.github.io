@@ -87,7 +87,7 @@
     position: absolute;
     background-color: #1fdc75;
     width: 70%;
-    height: 75vw;
+    height: 70vw;
     top: 80vw;
     left: 0;
 }
@@ -170,7 +170,7 @@
 }
 
 
-.flip-card-front-title{
+.flip-card-front-title {
     padding-top: 1vw;
 
     font-family: 'Oswald', sans-serif;
@@ -206,7 +206,7 @@
     transform: rotateY(180deg);
 }
 
-.flip-card-back-text{
+.flip-card-back-text {
     padding: 1.5vw;
 }
 
