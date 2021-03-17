@@ -80,7 +80,7 @@
     background-color: #1b2733;
 }
 
-#progressBackground {
+.titleBackground {
     width: 42vw;
     height: 0.3vw;
     border: 2.5vw solid #00e0a8;
@@ -90,36 +90,83 @@
     background-color: #00e0a8;
 }
 
-#progressText {
+.titleBackgroundPos1 {
+    position: absolute;
+    top: 7vw;
+    left: 49vw;
+    margin: 0.5vw;
+    background-color: #00e0a8;
+}
+
+.titleBackgroundPos2 {
+    position: absolute;
+    top: 38vw;
+    left: 49vw;
+    margin: 0.5vw;
+    background-color: #00e0a8;
+}
+
+.titlePosition1, .titlePosition2{
+    width: 46.8vw;
+    height: 0.3vw;
+    font-size: 4vw;
+    font-weight: 500;
+    letter-spacing: 0.35vw;
+}
+
+.titlePosition1{
+    position: absolute;
+    top: -2.8vw;
+    left: -2.2vw;
+}
+
+.titlePosition2{
+    position: absolute;
+    top: -2.8vw;
+    left: -2.2vw;
+}
+
+#rulesText, #statsText {
     opacity: 95%;
     text-align: center;
+}
+
+.RulesDescription{
+    margin-top: 7vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+
+.barContainer{
+    position: absolute;
+    top: 53.8vw;
+    left: 49.6vw;
+    width: 46.8vw;
 }
 
 #progressPercents {
-    margin-top: 1vw;
+    position: absolute;
+    top: -0.2vw;
+    left: 22vw;
 
-    opacity: 95%;
+    opacity: 50%;
     color: white;
     text-align: center;
+    font-size: 1.5vw;
 }
 
 #blankBar {
-    width: 46vw;
-    height: 1vw;
+    width: 46.8vw;
+    height: 2vw;
     border: 0.25vw gray;
     border-radius: 0.2vw;
 
     background-color: gray;
 }
 
-.barContainer{
-    margin-top: 10vw;
-    margin-left: 0.6vw;
-}
-
 #progressBar {
     width: 0;
-    height: 1vw;
+    height: 2vw;
 
     border: 0.25vw #1fdc58;
     border-radius: 0.2vw;
@@ -140,23 +187,35 @@
     float: left;
 }
 
-#stats {
-    width: 100%;
-    height: 100%;
+#statsContainer {
+    position: absolute;
+    top: 42.4vw;
+    left: 49vw;
+
+    width: 50vw;
+    height: 10vw;
     margin-top: 2vw;
 }
 
+#timer, #steps{
+    z-index: 11;
+    position: absolute;
+    top: 46.5vw;
+
+    font-size: 3.5vw;
+    text-align: center;
+}
+
 #timer {
+    left: 41.5vw;
+
     width: 30vw;
     height: 10vw;
-    float: left;
-    text-align: center;
-    opacity: 95%;
+
 }
 
 #steps {
+    left: 52.5vw;
     width: 40vw;
     height: 10vw;
-    text-align: center;
-    opacity: 95%;
 }

@@ -121,7 +121,7 @@
         if (points < 10) {
             let currentTime = new Date();
             currentTime = currentTime.getTime();
-            timer.innerHTML = "timer<br> " + Math.floor((startDate - currentTime) / -1000);
+            timer.innerHTML = Math.floor((startDate - currentTime) / -1000);
         }
     }
 
@@ -131,7 +131,7 @@
 
     function setStep() {
         stepsNumber += 1;
-        steps.innerHTML = "<p>steps<br> " + stepsNumber + "</p>";
+        steps.innerHTML = stepsNumber;
     }
 
     function setBar(points) {
@@ -191,28 +191,34 @@
 <div id="container">
     <div id="board"></div>
     <div id="sideBar">
-        <div id="progressBackground">
-            <div id="progressText" class="text primaryBlack">Game Progress</div>
-
+        <div class="titleBackground titleBackgroundPos1">
+            <div id="rulesText" class="titlePosition1 text primaryBlack">RULES</div>
         </div>
-        <div class="statsBackground"></div>
-        <div class="statsBackground"></div>
-        <div class="statsBackground"></div>
 
+        <div class="RulesDescription primaryWhite text">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
+            electronic. It has survived not only five centuries, but also the leap into
+            electronic.
+        </div>
+        <div class="titleBackground titleBackgroundPos2">
+            <div id="statsText" class="titlePosition2 text primaryBlack">STATISTICS</div>
+        </div>
+
+        <div id="timer" class="title primaryWhite">0</div>
+        <div id="steps" class="text primaryWhite">0</div>
+
+        <div id="statsContainer">
+            <div class="statsBackground"></div>
+            <div class="statsBackground"></div>
+            <div class="statsBackground"></div>
+        </div>
         <div class="barContainer">
-            <div id="progressPercents" class="text">0%</div>
+            <div id="progressPercents" class="text primaryBlack">0%</div>
             <div id="blankBar">
                 <div id="progressBar"></div>
             </div>
-        </div>
-        <div id="stats">
-            <div id="timer" class="text primaryWhite">timer<br> 0</div>
-            <div id="steps" class="text primaryWhite">steps<br> 0</div>
-        </div>
-        <!--        TODO RULES-->
-        <div id="rulesBackground">
-            <div class="text primaryBlack">Rules</div>
-            dsadsssssssssssssssaaaaaaaaaaaa
         </div>
     </div>
 </div>
