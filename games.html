@@ -61,7 +61,7 @@
     <div class="limeBackgroundLeft"></div>
     <div class="limeBackgroundRight"></div>
     <div class="gameCard-1">
-        <a href="games.html">
+        <a href="games/MemoCards/MemoCards.html">
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front primaryWhite">
@@ -187,21 +187,6 @@
     <p class="primaryGray text footerCredits" style="text-align: center">Designed by <a class="link" href="https://github.com/MintMissy">Mint Missy</a></p>
 </div>
 
-<script>
-    window.onscroll = function () {
-        scrollFunction()
-    };
-
-    let navbar = document.getElementById("navbar");
-    let sticky = navbar.offsetTop;
-
-    function scrollFunction() {
-        if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-        } else {
-            navbar.classList.remove("sticky");
-        }
-    }
-</script>
+<script src="Scripts/NavbarScript.js" type="text/javascript"></script>
 </body>
 </html>
