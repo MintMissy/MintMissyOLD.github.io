@@ -24,6 +24,15 @@
     margin: 2vw 13.15% 1vw 13.15%;
 }
 
-.footerCredits{
+.footerCredits {
     text-align: center;
+}
+
+.link:visited, .link:link, .link:active {
+    text-decoration: none;
+    color: var(--primaryGray);
+}
+
+.link:hover {
+    color: var(--secondaryGray);
 }
