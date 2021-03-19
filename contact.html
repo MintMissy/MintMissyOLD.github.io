@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" href="images/logo.png" style="width: 10vw; height: 10vw">
 </head>
-<body>
+<body onload="generateFooter()">
 <div class="navbar" id="navbar">
     <div class="buttonLeft">
         <div class="primaryColor navbarText logoButton">
@@ -46,14 +46,9 @@
 
 </div>
 
-<div class="footer">
-    <p class="footerInfo primaryGray text"><a class="link" href="https://www.youtube.com/channel/UCx-6vO4gFYume-eMa_OMJ6w">YouTube</a></p>
-    <p class="footerInfo primaryGray text"><a class="link" href="https://www.instagram.com/mint.missy/">Instagram</a></p>
-    <p class="footerInfo primaryGray text"><a class="link" href="https://github.com/MintMissy">Github</a></p>
-    <hr class="lineFooter">
-    <p class="primaryGray text footerCredits" style="text-align: center">Designed by <a class="link" href="https://github.com/MintMissy">Mint Missy</a></p>
-</div>
+<div class="footer"></div>
 
+<script type="text/javascript" src="scripts/generators.js"></script>
 <script src="Scripts/NavbarScript.js" type="text/javascript"></script>
 </body>
 </html>
