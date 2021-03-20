@@ -7,41 +7,9 @@
     <link href="../../css/main.css" rel="stylesheet">
     <link href="MemoCards.css" rel="stylesheet">
 </head>
-<body onload="generate(); generateFooter()">
+<body onload="generate(); generateFooter(); generateNavbar('games', '../../')">
 
-<div class="navbar" id="navbar">
-    <div class="buttonLeft">
-        <div class="primaryColor navbarText logoButton">
-            <img id="navbarLogo" src="../../images/logo.svg" alt="logo">
-        </div>
-    </div>
-    <a href="../../contact.html">
-        <div class="buttonRight contactButton">
-            <div class="primaryColor navbarText textButton">CONTACT</div>
-        </div>
-    </a>
-    <a href="../../about.html">
-        <div class="buttonRight aboutButton">
-            <div class="primaryColor navbarText textButton">ABOUT</div>
-        </div>
-    </a>
-    <a href="../../games.html">
-        <div class="activeSite buttonRight gamesButton">
-            <div class="primaryColor navbarText textButton">GAMES</div>
-        </div>
-    </a>
-    <a href="../../tools.html">
-        <div class="buttonRight toolsButton">
-            <div class="primaryColor navbarText textButton">TOOLS</div>
-        </div>
-    </a>
-
-    <a href="../../index.html">
-        <div class="buttonLeft homeButton">
-            <div class="primaryColor navbarText textButton">HOME</div>
-        </div>
-    </a>
-</div>
+<div class="navbar" id="navbar"></div>
 
 <div id="container">
     <div id="board"></div>
