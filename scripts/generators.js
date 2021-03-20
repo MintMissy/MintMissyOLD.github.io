@@ -38,7 +38,7 @@ function generateNavbar(siteType, pathToPages) {
     "        </div>\n" +
     "    </a>\n" +
     "\n" +
-    "    <a href=\"" + pathToPages + "../index\">\n" +
+    "    <a href=\"" + pathToPages + "../\">\n" +
     "        <div id=\"home\" class=\"buttonLeft homeButton\">\n" +
     "            <div class=\"primaryColor navbarText textButton\">HOME</div>\n" +
     "        </div>\n" +
