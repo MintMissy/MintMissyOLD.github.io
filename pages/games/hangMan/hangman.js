@@ -26,3 +26,21 @@ function generateLetters(){
         }
     }
 }
+
+// Script source: https://jakearchibald.com/2013/animated-line-drawing-svg/
+function drawElement(selector) {
+    let path = document.querySelector(selector);
+    let length = path.getTotalLength() + 1;
+
+    path.style.transition = path.style.WebkitTransition = 'none';
+
+    path.style.strokeDasharray = length + ' ' + length;
+    path.style.strokeDashoffset = length;
+
+    path.getBoundingClientRect();
+
+    path.style.transition = path.style.WebkitTransition =
+        'stroke-dashoffset 1s ease-in-out';
+
+    path.style.strokeDashoffset = '0';
+}

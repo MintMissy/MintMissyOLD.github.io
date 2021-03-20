@@ -1,5 +1,6 @@
-Gradient on background (scroll)
-https://www.w3schools.com/howto/howto_css_bg_gradient_scroll.asp
-
 Hangman basics
 https://www.w3schools.com/howto/howto_js_scrolldrawing.asp
+
+Knowledge source
+https://css-tricks.com/svg-line-animation-works/
+https://jakearchibald.com/2013/animated-line-drawing-svg/

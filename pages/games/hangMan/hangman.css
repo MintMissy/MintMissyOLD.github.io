@@ -70,3 +70,12 @@
 .footer {
     margin-top: 0;
 }
+
+.gallow{
+    position: absolute;
+    top: -11vw;
+    left: 2vw;
+
+    width: 50vw;
+    height: 70vw;
+}
