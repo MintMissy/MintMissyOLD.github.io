@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+.container {
+    width: 100%;
+    height: 61vw;
+    background-color: #333333;
+}
+
+.hangManLogo{
+    position: absolute;
+    top: 7vw;
+    left: 70.5vw;
+
+    width: 20vw;
+    height: 18vw;
+}
+
+.guessedWord{
+    position: absolute;
+    top: 47.5vw;
+    left: 5vw;
+
+    font-family: 'Dancing Script', cursive;
+    font-size: 5.5vw;
+}
+
+.lettersContainer {
+    position: absolute;
+    left: 68.5%;
+    top: 30vw;
+    width: 25%;
+    height: 25vw;
+}
+
+.firstRow, .secondRow, .thirdRow, .fourthRow {
+    height: 25%;
+    width: 100%;
+
+    text-align: center;
+
+    font-family: 'Kristen ITC', cursive;
+    font-size: 2.5vw;
+
+    letter-spacing: 0.5vw;
+    color: #333333;
+    transition: 0.2s;
+}
+
+.firstRow, .thirdRow {
+    background-color: #25e37b;
+}
+
+.secondRow, .fourthRow {
+    background-color: #1fdc75;
+}
+
+.letterCell{
+    position: relative;
+    top: 25%;
+
+    height: 100%;
+    width: 14.28%;
+    float: left;
+}
+
+.letterCell:hover{
+    color: var(--primaryWhite);
+    transition: 0.2s;
+}
+
+.footer {
+    margin-top: 0;
+}
