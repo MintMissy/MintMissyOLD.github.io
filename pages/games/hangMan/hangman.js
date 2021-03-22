@@ -44,3 +44,9 @@ function drawElement(selector) {
 
     path.style.strokeDashoffset = '0';
 }
+
+function getRandomWord(){
+    let maximum = wordList.length;
+    let randomIndex = Math.floor(Math.random() * (maximum + 1));
+    return wordList[randomIndex];
+}
