@@ -1,5 +1,5 @@
 // Method to string
-String.prototype.replaceAt = function(index, replacement) {
+String.prototype.replaceAt = function (index, replacement) {
     if (index >= this.length) {
         return this.valueOf();
     }
@@ -68,7 +68,7 @@ function getIndexesInWord(letter, word) {
     let indexes = [];
     for (let i = 0; i < word.length; i++) {
         if (word.charAt(i) === letter) {
-            indexes.push(i).log;
+            indexes.push(i);
         }
     }
     return indexes;
@@ -80,17 +80,17 @@ function getRandomWord() {
     return wordList[randomIndex];
 }
 
+let guessedWordDiv = document.getElementsByClassName("guessedWord")[0];
+
 // Generate word and user progress - gue
-let guessedWord = getRandomWord()
+let guessedWord = getRandomWord();
 console.log(guessedWord);
+guessedLetterDivs = document.getElementsByClassName('guessedLetter');
 let progress = "";
 for (let i = 0; i < guessedWord.length; i++) {
-    progress += "_"
+    progress += "_";
+    guessedWordDiv.innerHTML += "<div class='guessedLetter primaryWhite'>_</div>"
 }
-
-// Set word on screen to generated word
-let guessedWordDiv = document.getElementsByClassName("guessedWord")[0];
-guessedWordDiv.innerHTML = progress;
 
 // Current guessed letter
 let guess = "";
@@ -100,6 +100,13 @@ let mistakes = 0;
 
 // Remove letter from list, check if guess was correct or wrong.
 function guessExecutor(letterDiv, letter) {
+    if (guessedWord === progress) {
+        return;
+    }
+    if (mistakes === 11) {
+        return;
+    }
+
     // Remove letter div
     letterDiv.innerHTML = null;
     letterDiv.removeAttribute("onclick");
@@ -111,13 +118,45 @@ function guessExecutor(letterDiv, letter) {
 
 function correctGuess() {
     let indexesToReplace = getIndexesInWord(guess, guessedWord);
+
     for (let i = 0; i < indexesToReplace.length; i++) {
-        progress = progress.replaceAt(indexesToReplace[i], guess)
+        // Change progress variable
+        progress = progress.replaceAt(indexesToReplace[i], guess);
+
+        // Add temporary class to animate revealing letters
+        guessedLetterDivs[indexesToReplace[i]].classList.add('guessedLetter-animation');
+        guessedLetterDivs[indexesToReplace[i]].style.marginTop = "2vw";
+        guessedLetterDivs[indexesToReplace[i]].classList.remove('guessedLetter-pre-animation');
+        guessedLetterDivs[indexesToReplace[i]].innerHTML = guess;
+
+        // Remove temporary class to animate revealing letters
+        setTimeout(function () {
+            guessedLetterDivs[indexesToReplace[i]].classList.remove('guessedLetter-animation');
+            guessedLetterDivs[indexesToReplace[i]].classList.add('guessedLetter-pre-animation');
+        }, 10)
     }
-    guessedWordDiv.innerHTML = progress;
+
+    if (guessedWord === progress) {
+        win();
+    }
 }
 
 function wrongGuess() {
+    console.log(mistakes);
     mistakes++;
     drawElement(('.path' + mistakes));
+    if (mistakes === 11) {
+        gameOver();
+    }
+}
+
+function gameOver() {
+    alert("game over");
+    for (let i = 0; i < guessedWord.length; i++) {
+        guessedLetterDivs[i].innerHTML = guessedWord.charAt(i);
+    }
+}
+
+function win() {
+    alert("congrats! You win")
 }
