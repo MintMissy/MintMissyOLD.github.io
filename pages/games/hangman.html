@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="../../images/logo.png" style="width: 10vw; height: 10vw">
     <link href="../../css/main.css" rel="stylesheet">
-    <link href="hangMan/hangman.css" rel="stylesheet">
+    <link href="hangman/hangman.css" rel="stylesheet">
 </head>
 <body onload="generateFooter(); generateNavbar('games', '../'); generateLetters()">
 
@@ -54,6 +54,9 @@
 
     <div class="guessedWord primaryWhite"></div>
 
+    <input class="guessWordByUser primaryWhite" placeholder="Guess full word">
+    <div class="submitWord secondaryGray"><div class="submitSymbol">✔</div></div>
+
     <div class="lettersContainer">
         <div class="firstRow"></div>
         <div class="secondRow"></div>
@@ -64,9 +67,9 @@
 
 <div class="footer"></div>
 
-<script type="text/javascript" src="hangMan/wordList.js"></script>
+<script type="text/javascript" src="hangman/wordList.js"></script>
 <script type="text/javascript" src="../../scripts/generators.js"></script>
-<script type="text/javascript" src="hangMan/letterFunctions.js"></script>
-<script type="text/javascript" src="hangMan/hangman.js"></script>
+<script type="text/javascript" src="hangman/letterFunctions.js"></script>
+<script type="text/javascript" src="hangman/hangman.js"></script>
 </body>
 </html>
