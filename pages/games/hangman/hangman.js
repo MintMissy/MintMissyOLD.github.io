@@ -116,6 +116,40 @@ function guessExecutor(letterDiv, letter) {
     isInWord(letter, guessedWord) ? correctGuess() : wrongGuess();
 }
 
+// Check if full guess was correct or wrong.
+function guessFullWordExecutor(){
+    if (guessedWord === progress) {
+        return;
+    }
+    if (mistakes === 11) {
+        return;
+    }
+
+    let inputDiv = document.getElementsByClassName('typeWord')[0];
+
+    let fullGuessWord = inputDiv.value;
+
+    if(fullGuessWord !== guessedWord){
+        inputDiv.value = null;
+        wrongGuess();
+        return;
+    }
+
+    win();
+    let indexesToReplace = [];
+    for (let i = 0; i < progress.length; i++) {
+        if (progress.charAt(i) === "_"){
+            indexesToReplace.push(i);
+        }
+    }
+
+
+}
+
+function animateLetters(indexes){
+
+}
+
 function correctGuess() {
     let indexesToReplace = getIndexesInWord(guess, guessedWord);
 
@@ -142,7 +176,6 @@ function correctGuess() {
 }
 
 function wrongGuess() {
-    console.log(mistakes);
     mistakes++;
     drawElement(('.path' + mistakes));
     if (mistakes === 11) {
@@ -151,12 +184,12 @@ function wrongGuess() {
 }
 
 function gameOver() {
-    alert("game over");
+    console.log("game over");
     for (let i = 0; i < guessedWord.length; i++) {
         guessedLetterDivs[i].innerHTML = guessedWord.charAt(i);
     }
 }
 
 function win() {
-    alert("congrats! You win")
+    console.log("congrats! You win");
 }
