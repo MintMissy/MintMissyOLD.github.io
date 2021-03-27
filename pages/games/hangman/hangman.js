@@ -116,8 +116,28 @@ function guessExecutor(letterDiv, letter) {
     isInWord(letter, guessedWord) ? correctGuess() : wrongGuess();
 }
 
+// Check if player pressed enter
+const submitDiv = document.getElementsByClassName('submitWord')[0];
+const typeWordInput = document.getElementsByClassName('typeWord')[0];
+typeWordInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        submitDiv.click();
+    }
+});
+
+function addMissingLettersToWord(){
+    // Add missing letters to word
+    for (let i = 0; i < progress.length; i++) {
+        if (progress.charAt(i) === "_") {
+            let indexesToReplace = [i];
+            guess = guessedWord.charAt(i);
+            animateLetters(indexesToReplace);
+        }
+    }
+}
+
 // Check if full guess was correct or wrong.
-function guessFullWordExecutor(){
+function guessFullWordExecutor() {
     if (guessedWord === progress) {
         return;
     }
@@ -129,46 +149,39 @@ function guessFullWordExecutor(){
 
     let fullGuessWord = inputDiv.value;
 
-    if(fullGuessWord !== guessedWord){
+    if (fullGuessWord !== guessedWord) {
         inputDiv.value = null;
         wrongGuess();
         return;
     }
 
+    addMissingLettersToWord();
     win();
-    let indexesToReplace = [];
-    for (let i = 0; i < progress.length; i++) {
-        if (progress.charAt(i) === "_"){
-            indexesToReplace.push(i);
-        }
-    }
-
-
 }
 
-function animateLetters(indexes){
+function animateLetters(indexes) {
+    for (let i = 0; i < indexes.length; i++) {
+        // Change progress variable
+        progress = progress.replaceAt(indexes[i], guess);
 
+        // Add temporary class to animate revealing letters
+        guessedLetterDivs[indexes[i]].classList.add('guessedLetter-animation');
+        guessedLetterDivs[indexes[i]].style.marginTop = "2vw";
+        guessedLetterDivs[indexes[i]].classList.remove('guessedLetter-pre-animation');
+        guessedLetterDivs[indexes[i]].innerHTML = guess;
+
+        // Remove temporary class to animate revealing letters
+        setTimeout(function () {
+            guessedLetterDivs[indexes[i]].classList.remove('guessedLetter-animation');
+            guessedLetterDivs[indexes[i]].classList.add('guessedLetter-pre-animation');
+        }, 10)
+    }
 }
 
 function correctGuess() {
     let indexesToReplace = getIndexesInWord(guess, guessedWord);
 
-    for (let i = 0; i < indexesToReplace.length; i++) {
-        // Change progress variable
-        progress = progress.replaceAt(indexesToReplace[i], guess);
-
-        // Add temporary class to animate revealing letters
-        guessedLetterDivs[indexesToReplace[i]].classList.add('guessedLetter-animation');
-        guessedLetterDivs[indexesToReplace[i]].style.marginTop = "2vw";
-        guessedLetterDivs[indexesToReplace[i]].classList.remove('guessedLetter-pre-animation');
-        guessedLetterDivs[indexesToReplace[i]].innerHTML = guess;
-
-        // Remove temporary class to animate revealing letters
-        setTimeout(function () {
-            guessedLetterDivs[indexesToReplace[i]].classList.remove('guessedLetter-animation');
-            guessedLetterDivs[indexesToReplace[i]].classList.add('guessedLetter-pre-animation');
-        }, 10)
-    }
+    animateLetters(indexesToReplace);
 
     if (guessedWord === progress) {
         win();
@@ -185,9 +198,7 @@ function wrongGuess() {
 
 function gameOver() {
     console.log("game over");
-    for (let i = 0; i < guessedWord.length; i++) {
-        guessedLetterDivs[i].innerHTML = guessedWord.charAt(i);
-    }
+    addMissingLettersToWord();
 }
 
 function win() {

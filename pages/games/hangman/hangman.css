@@ -92,7 +92,7 @@
     top: 0.3vw;
 }
 
-.submitWord:hover{
+.submitWord:hover, .submitWord:active{
     background-color: var(--primaryColor);
     color: var(--primaryBlack);
     transition: 0.5s;
