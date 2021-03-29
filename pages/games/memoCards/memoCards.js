@@ -65,7 +65,7 @@ function flip(card) {
 
     if (randomSymbols[flippedCards[0].id.substr(4)] === randomSymbols[flippedCards[1].id.substr(4)]) {
         canFlip = true;
-        setStep();
+        addStep();
 
         setTimeout(() => {
             flippedCards[0].style.visibility = "hidden";
@@ -81,7 +81,7 @@ function flip(card) {
 
     if (randomSymbols[flippedCards[0].id.substr(4)] !== randomSymbols[flippedCards[1].id.substr(4)]) {
         canFlip = true;
-        setStep();
+        addStep();
 
         setTimeout(() => {
             flippedCards[0].classList.remove('flippedCard');
@@ -113,19 +113,23 @@ if (points < 10) {
     resetTime = setInterval(setTimer, 1000);
 }
 
-function setStep() {
+function addStep() {
     stepsNumber += 1;
     steps.innerHTML = stepsNumber;
 }
 
-function setBar(points) {
+function setStep(number) {
+    steps.innerHTML = number;
+}
 
+function setBar() {
+    console.log(points);
     let percentages = (points / 10) * 100;
     let bar = document.getElementById("progressBar");
     let currentPercentages = bar.style.width;
     currentPercentages = currentPercentages.replace("%", "");
 
-    var fillBar = setInterval(barFrames, 15);
+    let fillBar = setInterval(barFrames, 15);
 
     function barFrames() {
         if (currentPercentages >= percentages) {
@@ -137,6 +141,31 @@ function setBar(points) {
         }
     }
 }
-//TODO add memo reset option
-//TODO add rules
-//TODO add rules
+
+function resetGame(){
+
+    // Reset cards
+    canFlip = false;
+    lastFlipped = null;
+
+    flippedCards = [];
+    randomSymbols = [];
+    points = 0;
+
+    // Steps number reset
+    setStep(0);
+    stepsNumber = 0;
+
+    // Time reset
+    let timerDiv = document.getElementById('timer');
+    startDate = undefined;
+    timerDiv.innerHTML = "0";
+
+    // Board reset
+    board.innerHTML = "";
+    generate();
+
+    // Reset bar
+    progressPercents.innerHTML = "0%";
+    progressBar.style.width = '0%';
+}
