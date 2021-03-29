@@ -43,7 +43,7 @@ function generateLetters() {
 }
 
 // Script source: https://jakearchibald.com/2013/animated-line-drawing-svg/
-function drawElement(selector) {
+function drawElement(selector, drawingTime, fillColor) {
     let path = document.querySelector(selector);
     let length = path.getTotalLength() + 1;
 
@@ -55,9 +55,10 @@ function drawElement(selector) {
     path.getBoundingClientRect();
 
     path.style.transition = path.style.WebkitTransition =
-        'stroke-dashoffset 0.5s ease-in-out';
-
+        'stroke-dashoffset ' + drawingTime + ' ease-in-out';
     path.style.strokeDashoffset = '0';
+
+    path.style.fill = fillColor;
 }
 
 function isInWord(letter, word) {
@@ -125,7 +126,7 @@ typeWordInput.addEventListener('keydown', (e) => {
     }
 });
 
-function addMissingLettersToWord(){
+function addMissingLettersToWord() {
     // Add missing letters to word
     for (let i = 0; i < progress.length; i++) {
         if (progress.charAt(i) === "_") {
@@ -190,7 +191,7 @@ function correctGuess() {
 
 function wrongGuess() {
     mistakes++;
-    drawElement(('.path' + mistakes));
+    drawElement(('.path' + mistakes), '0.5s', 'none');
     if (mistakes === 11) {
         gameOver();
     }
@@ -198,9 +199,17 @@ function wrongGuess() {
 
 function gameOver() {
     console.log("game over");
+    // Draw play again title
+    for (let i = 1; i <= 9; i++) {
+        drawElement(('.playAgainPath' + i), '0.75s', 'var(--primaryWhite)');
+    }
     addMissingLettersToWord();
 }
 
 function win() {
-    console.log("congrats! You win");
+    console.log("Congrats! You win");
+    // Draw play again title
+    for (let i = 1; i <= 9; i++) {
+        drawElement(('.playAgainPath' + i), '0.75s', 'var(--primaryWhite)');
+    }
 }

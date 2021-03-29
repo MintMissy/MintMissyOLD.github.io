@@ -41,7 +41,7 @@
 .guessWordByUser {
     position: absolute;
     top: 27.5vw;
-    left: 68vw;
+    left: 68.5vw;
     height: 3vw;
     width: 24.3vw;
 
@@ -150,6 +150,17 @@
     position: absolute;
     top: -11vw;
     left: 2vw;
+
+    width: 50vw;
+    height: 70vw;
+}
+
+.playAgainSvg {
+    position: absolute;
+    top: -33vw;
+    left: -7.5vw;
+
+    transform: rotate(5deg);
 
     width: 50vw;
     height: 70vw;
