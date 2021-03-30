@@ -43,7 +43,7 @@ function generateLetters() {
 }
 
 // Script source: https://jakearchibald.com/2013/animated-line-drawing-svg/
-function drawElement(selector, drawingTime, fillColor) {
+function drawElement(selector, drawingTime) {
     let path = document.querySelector(selector);
     let length = path.getTotalLength() + 1;
 
@@ -57,8 +57,6 @@ function drawElement(selector, drawingTime, fillColor) {
     path.style.transition = path.style.WebkitTransition =
         'stroke-dashoffset ' + drawingTime + ' ease-in-out';
     path.style.strokeDashoffset = '0';
-
-    path.style.fill = fillColor;
 }
 
 function isInWord(letter, word) {
@@ -201,7 +199,7 @@ function gameOver() {
     console.log("game over");
     // Draw play again title
     for (let i = 1; i <= 9; i++) {
-        drawElement(('.playAgainPath' + i), '0.75s', 'var(--primaryWhite)');
+        drawElement(('.playAgainPath' + i), '0.75s');
     }
     addMissingLettersToWord();
 }
@@ -209,7 +207,19 @@ function gameOver() {
 function win() {
     console.log("Congrats! You win");
     // Draw play again title
+    let playAgain;
     for (let i = 1; i <= 9; i++) {
-        drawElement(('.playAgainPath' + i), '0.75s', 'var(--primaryWhite)');
+        drawElement(('.playAgainPath' + i), '0.75s');
+        setTimeout(function () {
+            playAgain = document.getElementsByClassName('playAgainPath' + i)[0];
+            playAgain.style.transition = 'width 2s linear 1s';
+            playAgain.style.fill = '#ffffff';
+            playAgain.onclick = "resetGame()"
+            // TODO add https://stackoverflow.com/questions/20012240/using-css-to-transition-the-fill-property-of-an-svg-path-on-hover
+        }, 650)
     }
+}
+
+function resetGame() {
+    console.log("reset game");
 }
