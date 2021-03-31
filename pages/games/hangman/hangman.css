@@ -157,11 +157,11 @@
 
 .playAgainSvg {
     position: absolute;
-    top: -33vw;
+    top: 16vw;
     left: -7.5vw;
 
     transform: rotate(5deg);
 
-    width: 50vw;
-    height: 70vw;
+    width: 25vw;
+    height: 35vw;
 }

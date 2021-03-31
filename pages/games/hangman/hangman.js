@@ -210,14 +210,40 @@ function win() {
     let playAgain;
     for (let i = 1; i <= 9; i++) {
         drawElement(('.playAgainPath' + i), '0.75s');
+        playAgain = document.getElementsByClassName('playAgainPath' + i)[0];
+        playAgain.style.transition = 'fill 0.7s ease';
+        playAgain.style.fill = '#13181f';
+
+
         setTimeout(function () {
             playAgain = document.getElementsByClassName('playAgainPath' + i)[0];
-            playAgain.style.transition = 'width 2s linear 1s';
             playAgain.style.fill = '#ffffff';
-            playAgain.onclick = "resetGame()"
-            // TODO add https://stackoverflow.com/questions/20012240/using-css-to-transition-the-fill-property-of-an-svg-path-on-hover
-        }, 650)
+
+            playAgainHover();
+        }, 150)
     }
+}
+
+function playAgainHover() {
+    let playAgainSvg = document.getElementsByClassName('playAgainSvg')[0];
+
+    playAgainSvg.addEventListener("mouseenter", function () {
+        for (let i = 1; i <= 9; i++) {
+            let playAgain = document.getElementsByClassName('playAgainPath' + i)[0];
+            playAgain.style.fill = 'var(--primaryColor)';
+            playAgain.style.stroke = 'var(--primaryColor)'
+            playAgain.style.transition = 'fill 0.35s ease';
+        }
+
+        // reset the color after a short delay
+        setTimeout(function () {
+            for (let i = 1; i <= 9; i++) {
+                let playAgain = document.getElementsByClassName('playAgainPath' + i)[0];
+                playAgain.style.fill = '#ffffff';
+                playAgain.style.stroke = 'var(--primaryWhite)'
+            }
+        }, 350);
+    }, false);
 }
 
 function resetGame() {
