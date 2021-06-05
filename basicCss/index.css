@@ -1,3 +1,76 @@
+:root {
+    --titleLoadTime: 0.4s;
+    --buttonLoadTime: 0.7s;
+    --paragraphTitleLoadTime: 0.5s;
+    --paragraphLoadTime: 0.5s;
+}
+
+@keyframes title-load {
+    0% {
+        transform: scale(0) translateY(-4vw)
+    }
+    80% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1) translateY(0)
+    }
+}
+
+@keyframes button-load {
+    0% {
+        transform: scale(0) translate(-50%, -55%)
+    }
+    80% {
+        transform: scale(1.1) translate(-50%, -55%)
+    }
+    100% {
+        transform: scale(1) translate(-50%, -50%)
+    }
+}
+
+@keyframes paragraph-title-load {
+    0% {
+        opacity: 20%;
+        transform: scale(0);
+    }
+    80% {
+        opacity: 100%;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes paragraph-load {
+    0% {
+        opacity: 20%;
+        transform: scale(0);
+    }
+    80% {
+        opacity: 100%;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+.indexTopImageTitle2, .indexBottomImageTitle {
+    animation: paragraph-title-load var(--paragraphTitleLoadTime) ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.indexTopImageText, .indexBottomImageText {
+    animation: paragraph-load var(--paragraphLoadTime) ease-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
 /* Document length */
 .content {
     width: 100%;
@@ -34,6 +107,10 @@
     position: absolute;
     top: 22.5vw;
     left: 40vw;
+
+    animation: title-load var(--titleLoadTime) ease-out;
+    animation-fill-mode: forwards;
+    transform: scale(0);
 }
 
 /* Button position*/
@@ -42,8 +119,8 @@
     background-color: #0f1c24;
     top: 41.5vw;
     left: 52vw;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%) scale(1);
+    /*-ms-transform: translate(-50%, -50%);*/
     font-size: 3vw;
     font-family: 'Verdana', bold, serif;
     font-weight: 600;
@@ -53,6 +130,9 @@
     border-radius: 2vw;
     transition: 0.7s;
     outline: none;
+
+    animation: button-load var(--buttonLoadTime) ease-out;
+    animation-fill-mode: forwards;
 }
 
 /* Button animation on hover*/

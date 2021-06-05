@@ -1,9 +1,29 @@
+:root {
+    --navLoadTime: 0.4s;
+    --navContentLoadTime: 0.5s;
+    --navContentLoadDelay: var(--navLoadTime);
+}
+
+@keyframes nav-load {
+    0% {transform: translatey(-100%)}
+    100% {transform: translateY(0%)}
+}
+
+@keyframes navbar-text-load {
+    0% {transform: scale(0)}
+    80% {transform: scale(1.1)}
+    100% {transform: scale(1)}
+}
+
 /* Navbar and button colors */
 .navbar {
     z-index: 9;
     width: 100%;
     height: 3.5vw;
     background-color: #2f2f3f;
+    animation: nav-load var(--navLoadTime) ease-out;
+    animation-fill-mode: forwards;
+    transform: translateY(-100%);
 }
 
 .activeSite {
@@ -19,6 +39,12 @@
 .buttonRight {
     float: right;
     text-align: center;
+}
+
+.buttonLeft, .buttonRight{
+    animation: navbar-text-load var(--navLoadTime) ease-out var(--navContentLoadDelay);
+    animation-fill-mode: forwards;
+    transform: scale(0);
 }
 
 /* Sticky navbar script */
