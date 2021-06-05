@@ -1,7 +1,6 @@
 :root {
     --titleLoadTime: 0.4s;
     --buttonLoadTime: 0.7s;
-    --paragraphTitleLoadTime: 0.5s;
     --paragraphLoadTime: 0.5s;
 }
 
@@ -29,21 +28,6 @@
     }
 }
 
-@keyframes paragraph-title-load {
-    0% {
-        opacity: 20%;
-        transform: scale(0);
-    }
-    80% {
-        opacity: 100%;
-        transform: scale(1.1);
-    }
-    100% {
-        opacity: 100%;
-        transform: scale(1);
-    }
-}
-
 @keyframes paragraph-load {
     0% {
         opacity: 20%;
@@ -59,16 +43,13 @@
     }
 }
 
-.indexTopImageTitle2, .indexBottomImageTitle {
-    animation: paragraph-title-load var(--paragraphTitleLoadTime) ease-out;
-    animation-fill-mode: forwards;
+.unloadedParagraph{
     opacity: 0;
 }
 
-.indexTopImageText, .indexBottomImageText {
+.loadedParagraph{
     animation: paragraph-load var(--paragraphLoadTime) ease-out;
     animation-fill-mode: forwards;
-    opacity: 0;
 }
 
 /* Document length */
@@ -147,42 +128,35 @@
     top: 55vw;
 }
 
-/* Second title */
-.indexTopImageTitle2 {
+.firstParagraphStructure {
     position: absolute;
-    top: 59vw;
+    top: 64.5vw;
     left: 22.5vw;
+
+    width: 46vw;
+    height: 18vw;
 }
 
-/* First text */
-.indexTopImageText {
-    width: 45%;
-    position: absolute;
-    top: 72vw;
-    left: 23vw;
+.paragraphTitle {
+    text-align: left;
+    width: 100%;
+    height: 9.5vw;
 }
 
-.limeBackgroundLeft {
+.paragraphText {
+    width: 100%;
+    height: 100%;
+}
+
+.indexImageMiddle {
+    width: 100%;
+    height: 110vw;
     z-index: -1;
     position: absolute;
-    background-color: #1fdc75;
-    width: 70%;
-    height: 70vw;
-    top: 80vw;
+    top: 60vw;
     left: 0;
 }
 
-.limeBackgroundRight {
-    z-index: -1;
-    position: absolute;
-    background-color: #1fdc75;
-    width: 50%;
-    height: 55vw;
-    top: 105vw;
-    left: 50%;
-}
-
-/* First flip card container */
 .gameCard-1 {
     position: absolute;
     width: 18vw;
@@ -190,8 +164,6 @@
     top: 105vw;
     left: 3vw;
 }
-
-/* Second flip card container */
 
 .gameCard-2 {
     position: absolute;
@@ -201,7 +173,6 @@
     left: 34vw;
 }
 
-/* Third flip card container */
 .gameCard-3 {
     position: absolute;
     width: 18vw;
@@ -210,7 +181,6 @@
     left: 67vw;
 }
 
-/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
     width: 18vw;
     height: 25vw;
@@ -309,17 +279,11 @@
     height: 110vw;
 }
 
-/* Third title */
-.indexBottomImageTitle {
+.secondParagraphStructure {
     position: absolute;
-    top: 149vw;
+    top: 154.5vw;
     left: 45.5vw;
-}
 
-/* Second text */
-.indexBottomImageText {
-    width: 45%;
-    position: absolute;
-    top: 162vw;
-    left: 46vw;
+    width: 46vw;
+    height: 26vw;
 }

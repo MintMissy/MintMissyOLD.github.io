@@ -41,7 +41,7 @@
     text-align: center;
 }
 
-.buttonLeft, .buttonRight{
+#navbarLogo, #contactText, #aboutText, #gamesText, #toolsText, #homeText{
     animation: navbar-text-load var(--navLoadTime) ease-out var(--navContentLoadDelay);
     animation-fill-mode: forwards;
     transform: scale(0);

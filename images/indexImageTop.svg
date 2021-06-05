@@ -62,46 +62,46 @@
        inkscape:collect="always"
        xlink:href="#linearGradient10176"
        id="linearGradient9493"
-       x1="145.8981"
-       y1="-93.349701"
-       x2="158.02945"
-       y2="-93.349701"
+       x1="145.91289"
+       y1="-87.309914"
+       x2="157.93259"
+       y2="-99.32962"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient10176"
        id="linearGradient12883"
-       x1="191.09927"
-       y1="-86.339699"
-       x2="195.34299"
-       y2="-86.339699"
+       x1="191.17679"
+       y1="-84.246803"
+       x2="194.71974"
+       y2="-87.789764"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient10176"
        id="linearGradient12891"
-       x1="187.94696"
-       y1="-75.579414"
-       x2="192.19067"
-       y2="-75.579414"
+       x1="188.02448"
+       y1="-73.51236"
+       x2="191.59328"
+       y2="-77.081154"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient10176"
        id="linearGradient12899"
-       x1="194.45403"
-       y1="-79.467735"
-       x2="198.69774"
-       y2="-79.467735"
+       x1="194.47986"
+       y1="-77.271484"
+       x2="198.10034"
+       y2="-80.89196"
        gradientUnits="userSpaceOnUse" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient10176"
        id="linearGradient14667"
-       x1="184.36058"
-       y1="-82.680664"
-       x2="188.60429"
-       y2="-82.680664"
+       x1="184.39713"
+       y1="-80.634384"
+       x2="187.98061"
+       y2="-84.217865"
        gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
@@ -112,8 +112,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.64"
-     inkscape:cx="721.09375"
-     inkscape:cy="188.28125"
+     inkscape:cx="482.03125"
+     inkscape:cy="124.21875"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -176,25 +176,25 @@
      id="layer1"
      transform="translate(34.630582,99.449892)">
     <circle
-       style="fill:url(#linearGradient12899);fill-opacity:1.0;stroke:none;stroke-width:1.6974"
+       style="fill:url(#linearGradient12899);fill-opacity:1;stroke:none;stroke-width:1.6974"
        id="path839"
        cx="196.57588"
        cy="-79.467735"
        r="2.1218545" />
     <circle
-       style="fill:url(#linearGradient12883);fill-opacity:1.0;stroke:none;stroke-width:1.6974"
+       style="fill:url(#linearGradient12883);fill-opacity:1;stroke:none;stroke-width:1.6974"
        id="circle843"
        cx="193.22113"
        cy="-86.339699"
        r="2.1218545" />
     <circle
-       style="fill:url(#linearGradient12891);fill-opacity:1.0;stroke:none;stroke-width:1.6974"
+       style="fill:url(#linearGradient12891);fill-opacity:1;stroke:none;stroke-width:1.6974"
        id="circle845"
        cx="190.06882"
        cy="-75.579414"
        r="2.1218545" />
     <circle
-       style="fill:url(#linearGradient14667);fill-opacity:1.0;stroke:none;stroke-width:1.6974"
+       style="fill:url(#linearGradient14667);fill-opacity:1;stroke:none;stroke-width:1.6974"
        id="circle847"
        cx="186.48244"
        cy="-82.680664"
@@ -233,7 +233,7 @@
        id="path845"
        sodipodi:nodetypes="cccc" />
     <path
-       style="fill:url(#linearGradient9493);fill-opacity:1.0;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill:url(#linearGradient9493);fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 148.88473,-88.104249 3.52794,0.82074 0.89981,-3.88855 3.89623,0.90161 0.82074,-3.52794 -3.89164,-0.9067 0.9053,-3.89007 -3.52794,-0.82074 -0.90454,3.88684 -3.89179,-0.90056 -0.82074,3.52795 3.8874,0.90467 z"
        id="path9233" />
   </g>

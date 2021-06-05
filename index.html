@@ -10,7 +10,6 @@
 <body onload="generateFooter(); generateNavbar('home', 'pages/')">
 
 <div class="navbar sticky" id="navbar"></div>
-
 <div class="content">
     <div class="topImageContainer">
         <img class="indexLeftLogo" src="images/logo.svg" alt="Logo">
@@ -19,16 +18,17 @@
         <a href="#myLandLink">
             <button class="indexImageButton primaryWhite">EXPLORE</button>
         </a>
-        <p id="myLand" class="indexTopImageTitle2 title primaryBlack">Welcome in my land</p>
-        <p class="indexTopImageText text primaryBlack">Howdy dear traveller! At this website you will find games and
-            tools made by local king - Mint Missy. Feel free to enjoy them in any time of your life.
-            I suggest you to start exploring my kingdom by clicking in one of the cards below. Warning, my sites may
-            contain a lot of mint energy.
-        </p>
+        <div class="firstParagraphStructure unloadedParagraph">
+            <div id="myLand" class="paragraphTitle title primaryBlack">Welcome in my land</div>
+            <div class="paragraphText text primaryBlack">Howdy dear traveller! At this website you will find games and
+                tools made by local king - Mint Missy. Feel free to enjoy them in any time of your life.
+                I suggest you to start exploring my kingdom by clicking in one of the cards below. Warning, my sites may
+                contain a lot of mint energy.
+            </div>
+        </div>
     </div>
     <div id="myLandLink"></div>
-    <div class="limeBackgroundLeft"></div>
-    <div class="limeBackgroundRight"></div>
+    <img class="indexImageMiddle" src="images/indexImageMiddle.svg" alt="Middle Page Background">
     <div class="gameCard-1">
         <a href="pages/games">
             <div class="flip-card">
@@ -92,7 +92,8 @@
                         <div class="flip-card-back-text">
                             <div class="primaryWhite flip-card-back-title">Useful Tools</div>
                             <p class="primaryWhite">Everyone love to be lazy! You can use my tools to shorten your work.
-                                I made for you an advanced color picker, text checker and much more. Click in this card to check all my tools.
+                                I made for you an advanced color picker, text checker and much more. Click in this card
+                                to check all my tools.
                         </div>
                     </div>
                 </div>
@@ -101,19 +102,24 @@
     </div>
     <div class="bottomImageContainer">
         <img class="indexImageBottom" src="images/indexImageBottom.svg" alt="Page background image">
-        <p class="indexBottomImageTitle title primaryBlack">It's time for mintout</p>
-        <p class="indexBottomImageText text primaryBlack">Lorem Ipsum is simply dummy text of the printing and
-            typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
-            five. Printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
-            five. Printer took a galley of type and scrambled it to make a type.</p>
+        <div class="secondParagraphStructure unloadedParagraph">
+            <div class="paragraphTitle title primaryBlack">It's time for mintout</div>
+            <div class="paragraphText text primaryBlack">Lorem Ipsum is simply dummy text of the printing and
+                typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                five. Printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                only
+                five. Printer took a galley of type and scrambled it to make a type.
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="footer"></div>
 
 <script type="text/javascript" src="scripts/generators.js"></script>
-<script src="scripts/navbarScript.js" type="text/javascript"></script>
+<script type="text/javascript" src="scripts/navbarScript.js"></script>
+<script type="text/javascript" src="scripts/loadElements.js"></script>
 </body>
 </html>

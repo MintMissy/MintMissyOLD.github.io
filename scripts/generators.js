@@ -19,31 +19,31 @@ function generateNavbar(siteType, pathToPages) {
     "    </div>\n" +
     "    <a href=\"" + pathToPages + "contact\">\n" +
     "        <div id=\"contact\" class=\"buttonRight contactButton\">\n" +
-    "            <div class=\"primaryColor navbarText textButton\">CONTACT</div>\n" +
+    "            <div id='contactText' class=\"primaryColor navbarText textButton\">CONTACT</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
     "    <a href=\"" + pathToPages + "about\">\n" +
     "        <div id=\"about\" class=\"buttonRight aboutButton\">\n" +
-    "            <div class=\"primaryColor navbarText textButton\">ABOUT</div>\n" +
+    "            <div id='aboutText' class=\"primaryColor navbarText textButton\">ABOUT</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
     "    <a href=\"" + pathToPages + "games\">\n" +
     "        <div id=\"games\" class=\"buttonRight gamesButton\">\n" +
-    "            <div class=\"primaryColor navbarText textButton\">GAMES</div>\n" +
+    "            <div id='gamesText' class=\"primaryColor navbarText textButton\">GAMES</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
     "    <a href=\"" + pathToPages + "tools\">\n" +
     "        <div id=\"tools\" class=\"buttonRight toolsButton\">\n" +
-    "            <div class=\"primaryColor navbarText textButton\">TOOLS</div>\n" +
+    "            <div id='toolsText' class=\"primaryColor navbarText textButton\">TOOLS</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
     "\n" +
     "    <a href=\"" + pathToPages + "../\">\n" +
     "        <div id=\"home\" class=\"buttonLeft homeButton\">\n" +
-    "            <div class=\"primaryColor navbarText textButton\">HOME</div>\n" +
+    "            <div id='homeText' class=\"primaryColor navbarText textButton\">HOME</div>\n" +
     "        </div>\n" +
     "    </a>\n"
 
     // Add active site class
-    document.getElementById(siteType).classList += " activeSite"
+    document.getElementById(siteType).classList += "activeSite"
 }
