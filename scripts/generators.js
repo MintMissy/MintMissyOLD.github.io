@@ -37,6 +37,11 @@ function generateNavbar(siteType, pathToPages) {
     "            <div id='toolsText' class=\"navbarText textButton\">TOOLS</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
+    "    <a href=\"" + pathToPages + "cv\">\n" +
+    "        <div id=\"tools\" class=\"buttonRight cvButton\">\n" +
+    "            <div id='cvText' class=\"navbarText textButton\">CV</div>\n" +
+    "        </div>\n" +
+    "    </a>\n" +
     "\n" +
     "    <a href=\"" + pathToPages + "../\">\n" +
     "        <div id=\"home\" class=\"buttonLeft homeButton\">\n" +

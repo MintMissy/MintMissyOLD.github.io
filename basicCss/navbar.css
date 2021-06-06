@@ -3,6 +3,7 @@
     --navContentLoadTime: 0.5s;
     --navContentLoadDelay: var(--navLoadTime);
     --homeColor: #0bf7d5;
+    --cvColor: #0bf9da;
     --toolsColor: #0cf9bf;
     --gamesColor: #0df9af;
     --aboutColor: #0df99a;
@@ -56,7 +57,7 @@
     text-align: center;
 }
 
-#navbarLogo, #contactText, #aboutText, #gamesText, #toolsText, #homeText {
+#navbarLogo, #contactText, #aboutText, #gamesText, #toolsText, #cvText, #homeText {
     animation: navbar-text-load var(--navLoadTime) ease-out var(--navContentLoadDelay);
     animation-fill-mode: forwards;
     transform: scale(0);
@@ -87,6 +88,12 @@
     width: 7%;
     height: 3.5vw;
     color: var(--homeColor);
+}
+
+.cvButton {
+    width: 5%;
+    height: 3.5vw;
+    color: var(--cvColor);
 }
 
 .toolsButton {
