@@ -2,17 +2,32 @@
     --navLoadTime: 0.4s;
     --navContentLoadTime: 0.5s;
     --navContentLoadDelay: var(--navLoadTime);
+    --homeColor: #0bf7d5;
+    --toolsColor: #0cf9bf;
+    --gamesColor: #0df9af;
+    --aboutColor: #0df99a;
+    --contactColor: #0ef995;
 }
 
 @keyframes nav-load {
-    0% {transform: translatey(-100%)}
-    100% {transform: translateY(0%)}
+    0% {
+        transform: translatey(-100%)
+    }
+    100% {
+        transform: translateY(0%)
+    }
 }
 
 @keyframes navbar-text-load {
-    0% {transform: scale(0)}
-    80% {transform: scale(1.1)}
-    100% {transform: scale(1)}
+    0% {
+        transform: scale(0)
+    }
+    80% {
+        transform: scale(1.1)
+    }
+    100% {
+        transform: scale(1)
+    }
 }
 
 /* Navbar and button colors */
@@ -41,7 +56,7 @@
     text-align: center;
 }
 
-#navbarLogo, #contactText, #aboutText, #gamesText, #toolsText, #homeText{
+#navbarLogo, #contactText, #aboutText, #gamesText, #toolsText, #homeText {
     animation: navbar-text-load var(--navLoadTime) ease-out var(--navContentLoadDelay);
     animation-fill-mode: forwards;
     transform: scale(0);
@@ -58,10 +73,12 @@
 .logoButton {
     width: 15%;
     height: 3.5vw;
+    margin-left: 0.5vw;
+    margin-right: 1vw;
 }
 
 #navbarLogo {
-    width: 5vw;
+    width: 3.5vw;
     height: 3.5vw;
     transition: 0.5s;
 }
@@ -69,26 +86,31 @@
 .homeButton {
     width: 7%;
     height: 3.5vw;
+    color: var(--homeColor);
 }
 
 .toolsButton {
     width: 12%;
     height: 3.5vw;
+    color: var(--toolsColor);
 }
 
 .gamesButton {
     width: 13%;
     height: 3.5vw;
+    color: var(--gamesColor);
 }
 
 .aboutButton {
     width: 12%;
     height: 3.5vw;
+    color: var(--aboutColor);
 }
 
 .contactButton {
     width: 16%;
     height: 3.5vw;
+    color: var(--contactColor);
 }
 
 /* Text animations on hover */

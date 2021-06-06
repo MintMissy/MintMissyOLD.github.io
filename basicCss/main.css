@@ -31,43 +31,6 @@ html {
     background: #626262;
 }
 
-body {
-    background-image: linear-gradient(to bottom, #0b2028, #16141b);
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/* colors for text */
-.primaryColor {
-    color: #1fdc75;
-}
-
-.secondaryColor {
-    color: #1fa5b3;
-}
-
-.primaryWhite {
-    color: #eeeeee;
-}
-
-/* colors for text */
-.primaryBlack {
-    color: #131920;
-}
-
-.secondaryBlack {
-    color: #0c2027;
-}
-
-.primaryGray {
-    color: rgba(203, 203, 203, 0.2);
-}
-
-.secondaryGray {
-    color: rgba(210, 210, 210, 0.4);
-}
-
 :root {
     --primaryColor: #1fdc75;
     --secondaryColor: #1fa5b3;
@@ -76,6 +39,13 @@ body {
     --secondaryBlack: #0c2027;
     --primaryGray: rgba(203, 203, 203, 0.2);
     --secondaryGray: rgba(210, 210, 210, 0.4);
+}
+
+body {
+    background-image: linear-gradient(to bottom, #0b2028, #16141b);
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 /* fonts and sizes for text */
@@ -103,4 +73,34 @@ body {
     text-align: center;
 
     transition: 0.5s;
+}
+
+/* colors for text */
+.primaryColor {
+    color: var(--primaryColor);
+}
+
+.secondaryColor {
+    color: var(--secondaryColor);
+}
+
+.primaryWhite {
+    color: var(--primaryWhite);
+}
+
+/* colors for text */
+.primaryBlack {
+    color: var(--primaryBlack);
+}
+
+.secondaryBlack {
+    color: var(--secondaryBlack);
+}
+
+.primaryGray {
+    color: var(--primaryGray);
+}
+
+.secondaryGray {
+    color: var(--secondaryGray);
 }

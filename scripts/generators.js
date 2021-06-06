@@ -14,33 +14,33 @@ function generateNavbar(siteType, pathToPages) {
     generateLocation.innerHTML = "" +
     "    <div class=\"buttonLeft\">\n" +
     "        <div class=\"primaryColor navbarText logoButton\">\n" +
-    "            <img id=\"navbarLogo\" src=\"" + pathToPages + "../images/logo.svg\" alt=\"logo\">\n" +
+    "            <img id=\"navbarLogo\" src=\"" + pathToPages + "../images/newLogo.png\" alt=\"logo\">\n" +
     "        </div>\n" +
     "    </div>\n" +
     "    <a href=\"" + pathToPages + "contact\">\n" +
     "        <div id=\"contact\" class=\"buttonRight contactButton\">\n" +
-    "            <div id='contactText' class=\"primaryColor navbarText textButton\">CONTACT</div>\n" +
+    "            <div id='contactText' class=\"navbarText textButton\">CONTACT</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
     "    <a href=\"" + pathToPages + "about\">\n" +
     "        <div id=\"about\" class=\"buttonRight aboutButton\">\n" +
-    "            <div id='aboutText' class=\"primaryColor navbarText textButton\">ABOUT</div>\n" +
+    "            <div id='aboutText' class=\"navbarText textButton\">ABOUT</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
     "    <a href=\"" + pathToPages + "games\">\n" +
     "        <div id=\"games\" class=\"buttonRight gamesButton\">\n" +
-    "            <div id='gamesText' class=\"primaryColor navbarText textButton\">GAMES</div>\n" +
+    "            <div id='gamesText' class=\"navbarText textButton\">GAMES</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
     "    <a href=\"" + pathToPages + "tools\">\n" +
     "        <div id=\"tools\" class=\"buttonRight toolsButton\">\n" +
-    "            <div id='toolsText' class=\"primaryColor navbarText textButton\">TOOLS</div>\n" +
+    "            <div id='toolsText' class=\"navbarText textButton\">TOOLS</div>\n" +
     "        </div>\n" +
     "    </a>\n" +
     "\n" +
     "    <a href=\"" + pathToPages + "../\">\n" +
     "        <div id=\"home\" class=\"buttonLeft homeButton\">\n" +
-    "            <div id='homeText' class=\"primaryColor navbarText textButton\">HOME</div>\n" +
+    "            <div id='homeText' class=\"navbarText textButton homeButton\">HOME</div>\n" +
     "        </div>\n" +
     "    </a>\n"
 

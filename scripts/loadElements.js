@@ -23,11 +23,22 @@ for (let paragraph of paragraphs) {
     paragraphs_height.push(getDistanceFromTop(paragraph))
 }
 
+const cards = document.getElementsByClassName("card");
+let firstCardHeight = getDistanceFromTop(cards[0])
+
 const loadParagraph = (paragraph) => {
     paragraph.classList.remove('unloadedParagraph');
     paragraphs_height.shift();
     paragraph.classList.add('loadedParagraph');
 }
+
+const loadCards = () => {
+    for (let card of cards) {
+        card.classList.remove('unloadedCard');
+        card.classList.add('loadedCard');
+    }
+}
+
 
 window.addEventListener('scroll', function () {
     scrollPosition = window.scrollY;
@@ -36,5 +47,9 @@ window.addEventListener('scroll', function () {
         if (scrollPosition >= paragraphs_height[i] + loadDistance) {
             loadParagraph(paragraphs[i]);
         }
+    }
+
+    if (scrollPosition >= firstCardHeight + loadDistance){
+        loadCards()
     }
 })

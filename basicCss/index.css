@@ -2,6 +2,7 @@
     --titleLoadTime: 0.4s;
     --buttonLoadTime: 0.7s;
     --paragraphLoadTime: 0.5s;
+    --cardLoadTime: 0.75s;
 }
 
 @keyframes title-load {
@@ -43,12 +44,44 @@
     }
 }
 
+@keyframes card-load {
+    0% {
+        opacity: 100%;
+        transform: scale(0) rotateY(0);
+    }
+    25%{
+        opacity: 100%;
+        transform: scale(0.3) rotateY(360deg);
+    }
+    50%{
+        opacity: 100%;
+        transform: scale(0.6) rotateY(540deg);
+    }
+    75%{
+        opacity: 100%;
+        transform: scale(0.7) rotateY(630deg);
+    }
+    100% {
+        opacity: 100%;
+        transform: scale(1) rotateY(720deg);
+    }
+}
+
 .unloadedParagraph{
     opacity: 0;
 }
 
 .loadedParagraph{
     animation: paragraph-load var(--paragraphLoadTime) ease-out;
+    animation-fill-mode: forwards;
+}
+
+.unloadedCard{
+    opacity: 0;
+}
+
+.loadedCard{
+    animation: card-load var(--cardLoadTime) ease-out;
     animation-fill-mode: forwards;
 }
 
